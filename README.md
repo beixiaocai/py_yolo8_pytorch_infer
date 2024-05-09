@@ -5,8 +5,19 @@
 
 | 程序         | 版本      |
 | ---------- | ------- |
-| python     | 3.6+    |
+| python     | 3.10+    |
 | 依赖库      | requirements.txt |
+
+
+### 安装 pytorch-cpu版本依赖库
+* pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+### 安装 pytorch-gpu版本依赖库
+* pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+* pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+* 注意：安装pytorch-gpu训练环境，请根据自己的电脑硬件选择cuda版本，比如我上面选择的https://download.pytorch.org/whl/cu121，并非适用所有电脑设备，请根据自己的设备选择
+
+
 ### 介绍
 * 基于python+pytorch开发的yolo8模型推理服务，直接运行yolo8的pt格式的模型文件，并对外提供图片分析的接口服务
 
@@ -25,13 +36,3 @@ python main.py
 python tests.py
 
 ~~~
-
-
-### Windows系统安装 pytorch-cpu版本依赖库
-* pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
-
-### Windows系统安装 pytorch-gpu版本依赖库
-* pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
-* pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-* 注意：安装pytorch-gpu训练环境，请根据自己的电脑硬件选择cuda版本，比如我上面选择的https://download.pytorch.org/whl/cu121，并非适用所有电脑设备，请根据自己的设备选择
-
